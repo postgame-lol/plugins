@@ -97,7 +97,8 @@
           ]
         },
         "commerce": false,
-        "commerce_description": "None. The plugin sells nothing: it reads and creates reviews within the account's plan. When the free reviews of the month are used up, it says when they come back and links the informational page postgame.lol/pro; it never links to a checkout or promotes an upgrade."
+        "commerce_description": "None. The plugin sells nothing: it reads and creates reviews within the account's plan. When the free reviews of the month are used up, it says when they come back and links the informational page postgame.lol/pro; it never links to a checkout or promotes an upgrade.",
+        "demo_recording_url": "https://postgame.lol/demo/plugin-demo-fba86b1bf26c.mp4"
       },
       "publication": {
         "release_notes": "First release: review your League of Legends games from their replays, read each game's mistakes with links to watch them, and see the mistakes you keep making across games."
