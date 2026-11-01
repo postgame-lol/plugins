@@ -43,6 +43,61 @@
         "brandColor": "#D3391A",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Review the player's latest reviewed game: the costliest mistakes, what to do instead, and links to watch them.",
+              "prompt": "Review my last League of Legends game on postgame.lol.",
+              "tools_triggered": "list_games, review_game",
+              "expected_behavior": "Lists the demo account's latest reviewed game (champion, role, result), then its costliest mistakes (2 or 3), each with the game time, what happened, what to do instead and a postgame.lol link that opens the moment. Hosts with MCP Apps show the review card."
+            },
+            {
+              "description": "Coach across games: the mistakes the player makes most often in their reviewed games.",
+              "prompt": "What mistakes do I keep making in League?",
+              "tools_triggered": "recurring_mistakes",
+              "expected_behavior": "Ranks the mistakes found in the most of the demo account's reviewed games, with how often and whether it is getting better, picks one to focus on and gives its advice and links to the latest times it happened."
+            },
+            {
+              "description": "One kind of mistake across games: every time it happened.",
+              "prompt": "Show me every time I made my most common mistake, so I can watch them.",
+              "tools_triggered": "recurring_mistakes, mistake_history",
+              "expected_behavior": "Finds the most common mistake, then lists each time it happened across the reviewed games (champion, game time, what happened) with a link to watch each one."
+            },
+            {
+              "description": "The player's account: linked League account, rank, plan and reviews left.",
+              "prompt": "Which League account is linked to my postgame.lol, and what's my rank?",
+              "tools_triggered": "account",
+              "expected_behavior": "Gives the linked Riot ID and region (or says none is linked), the current solo queue rank when there is one, and the account's plan."
+            },
+            {
+              "description": "Starting the review of a new game: where replays are and how to upload one.",
+              "prompt": "I want postgame.lol to review a new game. How do I upload my replay?",
+              "tools_triggered": "upload_replay",
+              "expected_behavior": "Explains where League saves .rofl replays (Documents/League of Legends/Replays, after downloading the game from the client's match history) and gives the postgame.lol page link to drop the file on; it is reviewed there."
+            }
+          ],
+          "negative": [
+            {
+              "description": "General League of Legends knowledge that isn't about the player's own games: the plugin should not be called; the assistant answers on its own.",
+              "prompt": "What's the best build for Jinx this patch?"
+            },
+            {
+              "description": "Another player's data: the plugin only reaches the signed-in player's own games, so it must not look anyone else up and should say it can't.",
+              "prompt": "Show me Faker's match history and his mistakes."
+            },
+            {
+              "description": "Account deletion isn't something the plugin does: no tool should be called (in particular not link_league_account); the assistant points to postgame.lol's settings or contact.",
+              "prompt": "Delete my postgame.lol account."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "None. The plugin sells nothing: it reads and creates reviews within the account's plan. When the free reviews of the month are used up, it says when they come back and links the informational page postgame.lol/pro; it never links to a checkout or promotes an upgrade."
+      },
+      "publication": {
+        "release_notes": "First release: review your League of Legends games from their replays, read each game's mistakes with links to watch them, and see the mistakes you keep making across games."
       }
     }
   }
