@@ -23,7 +23,7 @@
     "com.openai": {
       "interface": {
         "displayName": "postgame.lol",
-        "shortDescription": "League of Legends coaching from your own replays",
+        "shortDescription": "LoL coaching from your replays",
         "longDescription": "Upload a League of Legends replay and get every moment that cost you: deaths you could have avoided, lost objectives, missing vision, what to do instead, and a link to watch each one. Then find the mistakes you keep making across games and what to fix first.",
         "developerName": "postgame.lol",
         "category": "Lifestyle",
@@ -32,6 +32,7 @@
           "Write"
         ],
         "websiteURL": "https://postgame.lol",
+        "supportURL": "https://postgame.lol/legal#contact",
         "privacyPolicyURL": "https://postgame.lol/legal",
         "termsOfServiceURL": "https://postgame.lol/legal",
         "defaultPrompt": [
