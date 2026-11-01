@@ -3,7 +3,7 @@
   "mcpServers": {
     "postgame": {
       "type": "streamable-http",
-      "url": "https://mcp.postgame.lol/mcp/openai-plugin",
+      "url": "https://mcp.postgame.lol/mcp?utm_campaign=openai-plugin",
       "extensions": {
         "com.openai": {
           "auth": {

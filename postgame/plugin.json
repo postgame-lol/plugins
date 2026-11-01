@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "postgame",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Your League of Legends games, reviewed from their replays: the mistakes that cost you, what to do instead, and the ones you keep making.",
   "author": {
     "name": "postgame.lol",
