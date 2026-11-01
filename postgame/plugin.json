@@ -1,0 +1,48 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "postgame",
+  "version": "0.1.0",
+  "description": "Your League of Legends games, reviewed from their replays: the mistakes that cost you, what to do instead, and the ones you keep making.",
+  "author": {
+    "name": "postgame.lol",
+    "url": "https://postgame.lol"
+  },
+  "homepage": "https://postgame.lol",
+  "repository": "https://github.com/postgame-lol/plugins",
+  "license": "MIT",
+  "keywords": [
+    "league of legends",
+    "lol",
+    "coaching",
+    "replay",
+    "rofl",
+    "esports",
+    "gaming"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "postgame.lol",
+        "shortDescription": "League of Legends coaching from your own replays",
+        "longDescription": "Upload a League of Legends replay and get every moment that cost you: deaths you could have avoided, lost objectives, missing vision, what to do instead, and a link to watch each one. Then find the mistakes you keep making across games and what to fix first.",
+        "developerName": "postgame.lol",
+        "category": "Lifestyle",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://postgame.lol",
+        "privacyPolicyURL": "https://postgame.lol/legal",
+        "termsOfServiceURL": "https://postgame.lol/legal",
+        "defaultPrompt": [
+          "Review my last League game",
+          "What mistakes do I keep making in League?",
+          "What should I work on to climb?"
+        ],
+        "brandColor": "#D3391A",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

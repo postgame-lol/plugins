@@ -1,0 +1,26 @@
+{
+  "name": "postgame",
+  "displayName": "postgame.lol",
+  "version": "0.1.0",
+  "description": "Your League of Legends games, reviewed from their replays: the mistakes that cost you, what to do instead, and the ones you keep making.",
+  "author": {
+    "name": "postgame.lol",
+    "url": "https://postgame.lol"
+  },
+  "homepage": "https://postgame.lol",
+  "repository": "https://github.com/postgame-lol/plugins",
+  "license": "MIT",
+  "keywords": [
+    "league of legends",
+    "lol",
+    "coaching",
+    "replay",
+    "rofl",
+    "gaming"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://postgame.lol",
+  "supportUrl": "https://postgame.lol",
+  "privacyPolicyUrl": "https://postgame.lol/legal",
+  "termsOfServiceUrl": "https://postgame.lol/legal"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "postgame": {
+      "type": "http",
+      "url": "https://mcp.postgame.lol/mcp?utm_campaign=claude-plugin"
+    }
+  }
+}

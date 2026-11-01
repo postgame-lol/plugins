@@ -1,0 +1,20 @@
+{
+  "name": "postgame",
+  "interface": {
+    "displayName": "postgame.lol"
+  },
+  "plugins": [
+    {
+      "name": "postgame",
+      "source": {
+        "source": "local",
+        "path": "./postgame"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Lifestyle"
+    }
+  ]
+}

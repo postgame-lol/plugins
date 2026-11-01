@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "postgame": {
+      "type": "streamable-http",
+      "url": "https://mcp.postgame.lol/mcp?utm_campaign=openai-plugin",
+      "extensions": {
+        "com.openai": {
+          "auth": { "type": "oauth", "client": { "mode": "dcr" }, "baseScopes": ["postgame"] }
+        }
+      }
+    }
+  }
+}

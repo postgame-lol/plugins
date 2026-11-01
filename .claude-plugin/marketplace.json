@@ -1,0 +1,16 @@
+{
+  "name": "postgame",
+  "description": "postgame.lol: League of Legends coaching from your own replays",
+  "owner": {
+    "name": "postgame.lol",
+    "url": "https://postgame.lol"
+  },
+  "plugins": [
+    {
+      "name": "postgame",
+      "source": "./postgame",
+      "description": "League of Legends coaching from your own replays",
+      "category": "gaming"
+    }
+  ]
+}
