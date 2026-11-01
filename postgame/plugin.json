@@ -69,7 +69,7 @@
               "description": "The player's account: linked League account, rank, plan and reviews left.",
               "prompt": "Which League account is linked to my postgame.lol, and what's my rank?",
               "tools_triggered": "account",
-              "expected_behavior": "Gives the linked Riot ID and region (or says none is linked), the current solo queue rank when there is one, and the account's plan."
+              "expected_behavior": "Gives the linked Riot ID (the demo account is linked to Vivi#NieR) and region, its solo queue rank or 'unranked' when there is none (the demo account shows unranked), and the account's plan."
             },
             {
               "description": "Starting the review of a new game: where replays are and how to upload one.",
