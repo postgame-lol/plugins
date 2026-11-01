@@ -57,10 +57,10 @@
               ]
             },
             {
-              "description": "List the reviewed games, then open one: the review card appears.",
-              "prompt": "Which of my League games have been reviewed? Open the Wukong one.",
-              "tools_triggered": "list_games, review_game",
-              "expected_behavior": "list_games lists the demo account's reviewed games (Wukong and Lillia, jungle) with result and mistake count. review_game on the Wukong game shows the review card: the game, then each mistake with its time, grade, what happened, what to do instead and a 'Watch the moment' link to the map replay on postgame.lol."
+              "description": "List the reviewed games, open one as the review slides, then watch its full replay on the minimap.",
+              "prompt": "Which of my League games have been reviewed? Open the Wukong one, then show me its full replay at the first mistake.",
+              "tools_triggered": "list_games, review_game, watch_replay",
+              "expected_behavior": "list_games lists the demo account's reviewed games (Wukong and Lillia, jungle). review_game shows the review in the chat: the slides (the recap, then each mistake with what happened and what to do instead). watch_replay then shows the whole game replayed on the minimap, opened at the first mistake, with every mistake marked on its timeline. Both views can also be opened on postgame.lol."
             },
             {
               "description": "Queue the review of another player of an already uploaded game (analyze), then read it: the full analyze, review and card flow.",
