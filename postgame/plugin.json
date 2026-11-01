@@ -78,7 +78,7 @@
               "description": "The linked League account and the account details.",
               "prompt": "Link my League account Vivi#NieR to postgame.lol, then tell me which account is linked and my plan.",
               "tools_triggered": "link_league_account, account",
-              "expected_behavior": "link_league_account confirms Vivi#NieR is linked (the demo account is already linked to it, and keeps it; another Riot ID is refused on the demo account). account gives Vivi#NieR, region euw1, 'unranked' (the demo account shows no rank) and the plan, pro."
+              "expected_behavior": "link_league_account confirms Vivi#NieR is linked (the demo account is already linked to it, and keeps it; another Riot ID is refused on the demo account). account gives Vivi#NieR, region euw1, its current solo queue rank (or 'unranked'), and the plan, pro."
             }
           ],
           "negative": [
