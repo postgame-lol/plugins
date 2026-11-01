@@ -21,7 +21,6 @@
   ],
   "extensions": {
     "com.openai": {
-      "apps": "./.app.json",
       "interface": {
         "displayName": "postgame.lol",
         "shortDescription": "LoL coaching from your replays",
