@@ -32,7 +32,8 @@ recent ranked games are not reviewed yet.
 
 Call `analyze_replay` with the `replay_id`. If the player has no League account linked, it lists the ten players:
 ask which one they were (or call `link_league_account` with their Riot ID first, Name#TAG). Asking again never
-charges twice. If it answers `no_reviews_left`, tell the player and share its `upgrade_url` as is.
+charges twice. If it answers `no_reviews_left`, tell the player their free reviews for the month are used and the
+date they come back (`free_reviews_back_on`); their reviewed games stay readable.
 
 A review takes a minute or two. Clients that support MCP tasks follow it by themselves; otherwise wait and call
 `review_game` again while `state` is `queued` or `analyzing`.

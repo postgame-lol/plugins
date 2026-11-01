@@ -26,7 +26,7 @@
         "shortDescription": "LoL coaching from your replays",
         "longDescription": "Upload a League of Legends replay and get every moment that cost you: deaths you could have avoided, lost objectives, missing vision, what to do instead, and a link to watch each one. Then find the mistakes you keep making across games and what to fix first.",
         "developerName": "postgame.lol",
-        "category": "Lifestyle",
+        "category": "Education & Research",
         "capabilities": [
           "Read",
           "Write"

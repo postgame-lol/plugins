@@ -25,10 +25,10 @@ gives you a postgame.lol page to drop it on, or, if it can run commands, uploads
 Usage of the tools is measured (which tool, how long, errors) to improve the service; see the
 [privacy policy](https://postgame.lol/legal#privacy).
 
-## Plans
+## Your account
 
-Free accounts get 3 reviews a month. Pro reviews every game, without limit; your assistant can give you the
-checkout link if you ask.
+The plugin works with the postgame.lol account you sign in with, and the reviews your account includes. The plans
+are described at [postgame.lol/pro](https://postgame.lol/pro).
 
 postgame.lol isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone
 officially involved in producing or managing Riot Games properties.
