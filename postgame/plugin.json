@@ -48,34 +48,37 @@
         "test_cases": {
           "positive": [
             {
-              "description": "Review the player's latest reviewed game: the costliest mistakes, what to do instead, and links to watch them.",
-              "prompt": "Review my last League of Legends game on postgame.lol.",
-              "tools_triggered": "list_games, review_game",
-              "expected_behavior": "Lists the demo account's latest reviewed game (champion, role, result), then its costliest mistakes (2 or 3), each with the game time, what happened, what to do instead and a postgame.lol link that opens the moment. Hosts with MCP Apps show the review card."
-            },
-            {
-              "description": "Coach across games: the mistakes the player makes most often in their reviewed games.",
-              "prompt": "What mistakes do I keep making in League?",
-              "tools_triggered": "recurring_mistakes",
-              "expected_behavior": "Ranks the mistakes found in the most of the demo account's reviewed games, with how often and whether it is getting better, picks one to focus on and gives its advice and links to the latest times it happened."
-            },
-            {
-              "description": "One kind of mistake across games: every time it happened.",
-              "prompt": "Show me every time I made my most common mistake, so I can watch them.",
-              "tools_triggered": "recurring_mistakes, mistake_history",
-              "expected_behavior": "Finds the most common mistake, then lists each time it happened across the reviewed games (champion, game time, what happened) with a link to watch each one."
-            },
-            {
-              "description": "The player's account: linked League account, rank, plan and reviews left.",
-              "prompt": "Which League account is linked to my postgame.lol, and what's my rank?",
-              "tools_triggered": "account",
-              "expected_behavior": "Gives the linked Riot ID (the demo account is linked to Vivi#NieR) and region, its solo queue rank or 'unranked' when there is none (the demo account shows unranked), and the account's plan."
-            },
-            {
-              "description": "Starting the review of a new game: where replays are and how to upload one.",
+              "description": "Upload a new replay and get it reviewed, end to end: the upload page, then the review and its card. Download the attached replay first.",
               "prompt": "I want postgame.lol to review a new game. How do I upload my replay?",
-              "tools_triggered": "upload_replay",
-              "expected_behavior": "Explains where League saves .rofl replays (Documents/League of Legends/Replays, after downloading the game from the client's match history) and gives the postgame.lol page link to drop the file on; it is reviewed there."
+              "tools_triggered": "upload_replay, list_games, review_game",
+              "expected_behavior": "upload_replay explains where League saves .rofl replays and gives a postgame.lol upload link. Open it, drop the attached replay and pick any player when asked; the review starts there. Back in the chat, ask 'Show me its review once it's ready': list_games shows the new game, and review_game (after a minute or two) shows the review card with the mistakes found, each with its time, what happened, what to do instead and a 'Watch the moment' link that opens the map replay on postgame.lol.",
+              "file_attachment_urls": [
+                "https://postgame.lol/demo/postgame-demo-game.rofl"
+              ]
+            },
+            {
+              "description": "List the reviewed games, then open one: the review card appears.",
+              "prompt": "Which of my League games have been reviewed? Open the Wukong one.",
+              "tools_triggered": "list_games, review_game",
+              "expected_behavior": "list_games lists the demo account's reviewed games (Wukong and Lillia, jungle) with result and mistake count. review_game on the Wukong game shows the review card: the game, then each mistake with its time, grade, what happened, what to do instead and a 'Watch the moment' link to the map replay on postgame.lol."
+            },
+            {
+              "description": "Queue the review of another player of an already uploaded game (analyze), then read it: the full analyze, review and card flow.",
+              "prompt": "In my Lillia game, also review how the enemy jungler played.",
+              "tools_triggered": "list_games, analyze_replay, review_game",
+              "expected_behavior": "list_games gives the Lillia game's replay_id; analyze_replay without a player lists the ten players of that game, and with the enemy jungler's Riot ID queues their review (state queued, or the existing review if it was asked before). A minute or two later review_game shows that review and its card."
+            },
+            {
+              "description": "One mistake across games: its history.",
+              "prompt": "What was the costliest mistake in my Wukong game, and have I made it in my other games too?",
+              "tools_triggered": "review_game, mistake_history",
+              "expected_behavior": "review_game finds the costliest mistake of the Wukong game; mistake_history lists every time that mistake happened across the reviewed games (champion, game time, what happened) with a link to watch each one, or says it happened only once."
+            },
+            {
+              "description": "The linked League account and the account details.",
+              "prompt": "Link my League account Vivi#NieR to postgame.lol, then tell me which account is linked and my plan.",
+              "tools_triggered": "link_league_account, account",
+              "expected_behavior": "link_league_account confirms Vivi#NieR is linked (the demo account is already linked to it, and keeps it; another Riot ID is refused on the demo account). account gives Vivi#NieR, region euw1, 'unranked' (the demo account shows no rank) and the plan, pro."
             }
           ],
           "negative": [
